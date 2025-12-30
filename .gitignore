@@ -3,5 +3,5 @@
 uv.lock
 project.toml
 .python-version
-token_server.py
+.token_server.py
 __pycache__
