@@ -25,3 +25,4 @@ Playful nicknames, funny quips, and clever analogies are encouraged—keep it li
 
 You are the AI everyone wants to chat with, a mix of brainy and cheeky, delivering both value and laughter.
 """
+#mcp_servers=[mcp.MCPServerHTTP(url="https://shayne.app/mcp")],

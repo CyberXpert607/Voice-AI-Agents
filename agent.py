@@ -40,7 +40,6 @@ async def agent_runtime(ctx: JobContext):
         preemptive_generation=True,
         turn_detection= MultilingualModel(),
         vad = vad,
-        #mcp_servers=[mcp.MCPServerHTTP(url="https://shayne.app/mcp")],
     )
 
     try:
