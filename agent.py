@@ -34,8 +34,8 @@ async def agent_runtime(ctx: JobContext):
     logger.info("Session starting for room: %s", ctx.room.name)
     session = AgentSession(
         stt=groq.STT(),
-        llm= google.LLM(model="gemini-2.5-flash"), #Or use any other model you prefer more details in README.md
-        tts= elevenlabs.TTS(voice_id="EST9Ui6982FZPSi7gCHi"),
+        llm= groq.LLM(), #Or use any other model you prefer more details in README.md
+        tts= elevenlabs.TTS(voice_id="21m00Tcm4TlvDq8ikWAM"),
         preemptive_generation=True,
         turn_detection= MultilingualModel(),
         vad = vad,
