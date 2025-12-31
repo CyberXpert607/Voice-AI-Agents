@@ -3,5 +3,6 @@
 .python-version
 token_server.py
 __pycache__
-Dockerfile
-.dockerignore
+pyproject.toml
+uv.lock
+
