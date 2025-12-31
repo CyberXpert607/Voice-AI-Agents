@@ -5,3 +5,5 @@ project.toml
 .python-version
 token_server.py
 __pycache__
+Dockerfile
+.dockerignore
