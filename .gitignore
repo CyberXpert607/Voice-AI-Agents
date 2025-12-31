@@ -1,7 +1,5 @@
 .env
 .venv/
-uv.lock
-project.toml
 .python-version
 token_server.py
 __pycache__
