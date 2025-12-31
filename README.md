@@ -106,6 +106,7 @@ Open your .env file and fill in the values:
 # LLM Providers
 
 OPENAI_API_KEY=your_openai_api_key_here
+
 GROQ_API_KEY=your_groq_api_key_here
 
 # Text-to-Speech
@@ -113,8 +114,11 @@ GROQ_API_KEY=your_groq_api_key_here
 ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
 
 # LiveKit
+
 LIVEKIT_API_KEY=your_livekit_api_key_here
+
 LIVEKIT_API_SECRET=your_livekit_api_secret_here
+
 LIVEKIT_URL=wss://your-livekit-url.livekit.cloud
 
 7️⃣ Run the Agent
