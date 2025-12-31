@@ -1,0 +1,22 @@
+[project]
+name = "voice-ai-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi>=0.128.0",
+    "livekit[mcp]>=1.0.23",
+    "livekit-plugins-elevenlabs>=1.3.10",
+    "livekit-plugins-google>=1.3.10",
+    "livekit-plugins-groq>=1.3.10",
+    "livekit-plugins-noise-cancellation>=0.2.5",
+    "livekit-plugins-openai>=1.3.10",
+    "livekit-plugins-silero>=1.3.10",
+    "livekit-plugins-turn-detector>=1.3.10",
+    "pydantic>=2.12.5",
+    "uuid>=1.30",
+    "livekit-agents[mcp,rtc]~=1.3",
+    "elevenlabs>=2.27.0",
+]

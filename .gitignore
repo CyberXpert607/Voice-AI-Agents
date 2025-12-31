@@ -3,6 +3,5 @@
 .python-version
 token_server.py
 __pycache__
-pyproject.toml
-uv.lock
+agent_tests.py
 

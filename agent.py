@@ -1,6 +1,6 @@
-from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli, mcp
+from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
-from livekit.plugins import groq, silero, noise_cancellation, google, elevenlabs
+from livekit.plugins import groq, silero, noise_cancellation, google
 from livekit import rtc
 from dotenv import load_dotenv
 from prompts import INSTRUCTIONS
@@ -34,8 +34,8 @@ async def agent_runtime(ctx: JobContext):
     logger.info("Session starting for room: %s", ctx.room.name)
     session = AgentSession(
         stt=groq.STT(),
-        llm= groq.LLM(), #Or use any other model you prefer more details in README.md
-        tts=elevenlabs.TTS(voice_id="21m00Tcm4TlvDq8ikWAM"),
+        llm= google.LLM(model="gemini-2.5-flash"), #Or use any other model you prefer more details in README.md
+        tts=groq.TTS(model="canopylabs/orpheus-v1-english", voice="autumn"),
         preemptive_generation=True,
         turn_detection= MultilingualModel(),
         vad = vad,
