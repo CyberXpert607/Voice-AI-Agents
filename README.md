@@ -44,6 +44,11 @@ Create a .env file in the project root:
 
 
 Or manually create one if .env.example is not present.
+Also make sure to use the command:
+
+``uv run python agent.py download-files`
+
+to install the dependencies needed for the agent to run.
 
 5️⃣ Obtain Required API Keys
 
@@ -126,19 +131,3 @@ LIVEKIT_URL=wss://your-livekit-url.livekit.cloud
 Activate the environment and start the agent:
 
 `uv run python agent.py`
-
-8️⃣ Verify Everything Is Working
-
-- If setup is correct, you should see logs indicating:
-
-- Successful LiveKit connection
-
-- Agent joining a room
-
-- LLM responses
-
-- Audio synthesis starting without errors
-
-- Notes & Best Practices
-
-- This repo assumes Python 3.10+
