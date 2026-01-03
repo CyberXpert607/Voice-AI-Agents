@@ -59,7 +59,6 @@ async def agent_runtime(ctx: JobContext):
         return
 
     logger.info("Agent takes the first turn in speaking")
-    #await asyncio.sleep(.3)
     await session.generate_reply(instructions="Greet the user and ask whether they need assistance in any way possible")
 
 
