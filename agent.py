@@ -1,7 +1,8 @@
 from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
-from livekit.plugins import groq, silero, noise_cancellation, google, elevenlabs
+from livekit.plugins import groq, silero, noise_cancellation, elevenlabs
 from livekit import rtc
+import asyncio
 from dotenv import load_dotenv
 from prompts import INSTRUCTIONS
 import logging
@@ -58,7 +59,8 @@ async def agent_runtime(ctx: JobContext):
         return
 
     logger.info("Agent takes the first turn in speaking")
-    await session.generate_reply(instructions="Hello there, how can I help you today?")
+    #await asyncio.sleep(.3)
+    await session.generate_reply(instructions="Greet the user and ask whether they need assistance in any way possible")
 
 
 if __name__ == "__main__":
