@@ -2,18 +2,24 @@ This guide walks you through setting up the Voice AI Agent locally.
 
 1️⃣ Install uv (Python Package Manager)
 
-This project uses uv for fast, reproducible Python environments.
+This project uses UV Package Manager for fast, reproducible Python environments.
 
-`Install uv`
+```bash
+pip install uv
+```
 
 Verify installation:
-
-`uv --version`
+```bash
+uv --version
+```
 
 2️⃣ Clone the Repository
-`git clone https://github.com/CyberXpert607/Voice-AI-Agents.git`
-
-`cd Voice-AI-Agents`
+```bash
+git clone https://github.com/CyberXpert607/Voice-AI-Agents.git
+```
+```bash
+cd Voice-AI-Agents
+```
 
 3️⃣ Sync the Python Environment
 
@@ -21,14 +27,14 @@ This project does NOT require requirements.txt.
 
 Instead, dependencies are managed via:
 
-pyproject.toml
+`pyproject.toml`
 
-uv.lock
+`uv.lock`
 
 Install dependencies
-
-`uv sync`
-
+```bash
+uv sync
+```
 
 This will:
 
@@ -39,14 +45,14 @@ Install exact, locked dependency versions
 4️⃣ Create a .env File
 
 Create a .env file in the project root:
-
-`cp .env.example .env`
-
+```bash
+cp .env.example .env
+```
 
 Or manually create one if .env.example is not present.
 Also make sure to use the command:
 
-``uv run python agent.py download-files`
+`uv run python agent.py download-files`
 
 to install the dependencies needed for the agent to run.
 
