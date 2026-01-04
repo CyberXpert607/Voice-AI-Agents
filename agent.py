@@ -2,7 +2,6 @@ from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from livekit.plugins import groq, silero, noise_cancellation, elevenlabs
 from livekit import rtc
-import asyncio
 from dotenv import load_dotenv
 from prompts import INSTRUCTIONS
 import logging
