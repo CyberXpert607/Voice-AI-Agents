@@ -51,8 +51,9 @@ cp .env.example .env
 
 Or manually create one if .env.example is not present.
 Also make sure to use the command:
-
-`uv run python agent.py download-files`
+```bash
+uv run python agent.py download-files
+```
 
 to install the dependencies needed for the agent to run.
 
@@ -135,5 +136,6 @@ LIVEKIT_URL=wss://your-livekit-url.livekit.cloud
 7️⃣ Run the Agent
 
 Activate the environment and start the agent:
-
-`uv run python agent.py`
+```bash
+uv run python agent.py
+```
