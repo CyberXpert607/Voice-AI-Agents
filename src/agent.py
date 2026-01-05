@@ -1,4 +1,4 @@
-from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli, function_tool
+from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from livekit.plugins import groq, silero, noise_cancellation, elevenlabs
 from livekit import rtc
