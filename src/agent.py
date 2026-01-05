@@ -1,8 +1,9 @@
-from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli
+from livekit.agents import Agent, AgentServer, AgentSession, room_io, JobProcess, JobContext, cli, function_tool
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from livekit.plugins import groq, silero, noise_cancellation, elevenlabs
 from livekit import rtc
 from dotenv import load_dotenv
+from tools.get_weather import get_weather
 from prompts import INSTRUCTIONS
 import logging
 
@@ -14,12 +15,11 @@ logger = logging.getLogger(__name__)
 class Shayla(Agent):
     def __init__(self):
         super().__init__(
-            instructions=INSTRUCTIONS
+            instructions=INSTRUCTIONS,
+            tools=[get_weather],
         )
 
-
 server  = AgentServer()
-
 
 def init_modules(proc: JobProcess):
     proc.userdata["vad"] = silero.VAD.load()
@@ -34,7 +34,7 @@ async def agent_runtime(ctx: JobContext):
     logger.info("Session starting for room: %s", ctx.room.name)
     session = AgentSession(
         stt=groq.STT(),
-        llm= groq.LLM(), #Or use any other model you prefer more details in README.md
+        llm= groq.LLM(), #You can use any model of your choice more details in README.md
         tts= elevenlabs.TTS(voice_id="21m00Tcm4TlvDq8ikWAM"),
         preemptive_generation=True,
         turn_detection= MultilingualModel(),

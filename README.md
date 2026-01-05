@@ -118,6 +118,7 @@ Open your .env file and fill in the values:
 
 # LLM Providers
 
+Obviously here you can choose which model to use for your agent either openai, or google, or anthropic, it's really your choice.
 OPENAI_API_KEY=your_openai_api_key_here
 
 GROQ_API_KEY=your_groq_api_key_here
