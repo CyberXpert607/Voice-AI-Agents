@@ -135,6 +135,9 @@ LIVEKIT_API_SECRET=your_livekit_api_secret_here
 
 LIVEKIT_URL=wss://your-livekit-url.livekit.cloud
 
+# OpenWeather
+OPENWEATHER_API_KEY=your_open_weather_api_key
+
 7️⃣ Run the Agent
 
 Activate the environment and start the agent:
