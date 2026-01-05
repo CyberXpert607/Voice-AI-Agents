@@ -52,6 +52,7 @@ cp .env.example .env
 Or manually create one if .env.example is not present.
 Also make sure to use the command:
 ```bash
+cd src/
 uv run python agent.py download-files
 ```
 
@@ -137,5 +138,6 @@ LIVEKIT_URL=wss://your-livekit-url.livekit.cloud
 
 Activate the environment and start the agent:
 ```bash
-uv run python agent.py
+cd src/
+uv run python agent.py console
 ```
